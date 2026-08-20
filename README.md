@@ -2,7 +2,7 @@
 
 This repository contains the codebase for the project **"Man vs Machine on Oslo Børs"**, which evaluates the performance of machine learning models against traditional finance factors on the Oslo Stock Exchange. The project specifically explores the impact of combining traditional equity factors (e.g., size, momentum, volatility) with "Smart Money" / "Best Ideas" signals derived from mutual fund holdings.
 
-This project is part of a master's thesis submitted to NHH Norwegian School of Economics. The full thesis, including the complete literature review and discussion, will be linked here once published. *[link to be added]*
+This project is part of a master's thesis submitted to NHH Norwegian School of Economics. The full thesis, including the complete literature review and discussion is available here: [Machine Learning for Stock Selection on Oslo Børs](https://nva.sikt.no/registration/019fdb815e9e-1bb77343-8fd1-4763-9922-daada8204880)
 
 ## Project Structure
 
