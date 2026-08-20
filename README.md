@@ -2,6 +2,8 @@
 
 This repository contains the codebase for the project **"Man vs Machine on Oslo Børs"**, which evaluates the performance of machine learning models against traditional finance factors on the Oslo Stock Exchange. The project specifically explores the impact of combining traditional equity factors (e.g., size, momentum, volatility) with "Smart Money" / "Best Ideas" signals derived from mutual fund holdings.
 
+This project is part of a master's thesis submitted to NHH Norwegian School of Economics. The full thesis, including the complete literature review and discussion, will be linked here once published. *[link to be added]*
+
 ## Project Structure
 
 The workflow is divided into four Jupyter Notebooks, run in sequence:
@@ -57,7 +59,25 @@ Data_Cleaning.ipynb
 - **Significant Alpha:** The Long-Short Modern Ensemble strategy delivers robust Carhart 4-factor alpha, indicating that the returns are not just compensating for standard equity risk exposures.
 - **Smart Money Value:** Incorporating "Best Ideas" signals from mutual fund portfolios enhances predictive accuracy and helps the models navigate modern market conditions on the Oslo Børs.
 
+## Data Availability
+
+The datasets used in this project are **not included** in this repository:
+
+- **Oslo Børs equity data and mutual fund holdings data** were obtained through NHH Norwegian School of Economics' institutional data access and cannot be redistributed due to data provider licensing restrictions.
+- **Market, risk-free rate, and Fama-French/Carhart factor data** for Norway are publicly available from Bernt Arne Ødegaard's dataset at [ba-odegaard.no/financial_data](https://ba-odegaard.no/financial_data/) and should be downloaded directly from the source rather than from this repo.
+
+See [`Data/README.md`](Data/README.md) for the full file-by-file breakdown, sourcing, and how to reproduce the pipeline with equivalent data access.
+
+**Citation:** Ødegaard, Bernt Arne. *"Empirics of the Oslo Stock Exchange: Basic, Descriptive, Results 1980–2024."* Available at ba-odegaard.no/financial_data.
+
 ## Requirements
+
+See [`requirements.txt`](requirements.txt) for pinned versions. Install with:
+
+```
+pip install -r requirements.txt
+```
+
 - `pandas`
 - `numpy`
 - `scikit-learn`
@@ -65,7 +85,6 @@ Data_Cleaning.ipynb
 - `statsmodels`
 - `matplotlib`
 - `scipy`
-- `pyreadr`
 
 ## Usage
 Run the notebooks in the following logical order:
@@ -74,4 +93,8 @@ Run the notebooks in the following logical order:
 3. `Simulation.ipynb`
 4. `Evaluation.ipynb`
 
-Each notebook reads the CSV outputs of the previous stage from a shared `../Data/` directory, so notebooks must be run in order the first time (or whenever upstream data changes).
+Each notebook reads the CSV outputs of the previous stage from a shared `../Data/` directory, so notebooks must be run in order the first time (or whenever upstream data changes). See the Data Availability section above for how to obtain the required input files.
+
+## License
+
+The code in this repository is released under the [MIT License](LICENSE). This license covers the source code only — it does not apply to any third-party data referenced by the notebooks (see Data Availability above).

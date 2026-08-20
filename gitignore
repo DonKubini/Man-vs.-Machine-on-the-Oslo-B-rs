@@ -1,0 +1,20 @@
+# Data files (proprietary/institutional access - see Data/README.md)
+Data/*.csv
+Data/*.png
+!Data/README.md
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
